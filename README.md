@@ -40,7 +40,11 @@ Optional arguments:
 
 ## Install
 
-TODO
+With git:
+```shell
+$ git clone git://github.com/jamesroutley/dev.git ~/.dev
+$ echo 'source ~/.dev/dev.sh' >> bashrc
+```
 
 
 ## Configuration

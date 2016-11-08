@@ -8,7 +8,7 @@ function _dev_usage() {
     echo "Positional arguments:"
     echo "  environment   The environment to set up. The environment <env>"
     echo "                should have a corresponding file located at"
-    echo "                $DEV_HOME/<env>"
+    echo "                $DEV_HOME/<env>".
     echo ""
     echo "Optional arguments:"
     echo "  -h            Help. Display this message and quit."

@@ -1,3 +1,4 @@
+# shellcheck disable=SC2148
 DEVFILE_HOME="${DEVFILE_HOME:-$HOME/.devfiles}"
 
 
@@ -41,7 +42,7 @@ function dev() {
         ;;
     esac
   done
-  shift $(($OPTIND - 1))
+  shift $((OPTIND - 1))
   if [ -z "$1" ]; then
     _dev_usage long
     echo "Error. No environment supplied."
@@ -69,12 +70,13 @@ function dev() {
     fi
   done
   if $_is_environment_invalid; then
-    echo "Error. Environment" \'$_env\' "not found. Please choose from:"
+    echo "Error. Environment" \'"$_env"\' "not found. Please choose from:"
     for _environment_j in "${_envs[@]}"; do
-      echo "  -" $_environment_j
+      echo "  -" "$_environment_j"
     done
     return 1
   fi
 
-  source $DEVFILE_HOME/$_env
+  # shellcheck disable=SC1090
+  source "$DEVFILE_HOME"/"$_env"
 }

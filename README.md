@@ -34,7 +34,6 @@ Positional arguments:
 Optional arguments:
   -h            Help. Display this message and quit.
   -v            Version. Print version number and quit.
-
 ```
 
 
@@ -49,6 +48,6 @@ $ echo 'source ~/.dev/dev.sh' >> bashrc
 
 ## Configuration
 
-A new environment, `<env>`, can be added by by creating the file `$DEV_HOME/<env>`. This file is sourced when the command `dev <env>` is run, executing any shell commands stored in the file.
+A new environment, `<env>`, can be added by by creating the file `$DEVFILE_HOME/<env>`. This file is sourced when the command `dev <env>` is run, executing any shell commands stored in the file.
 
-`$DEV_HOME` is defaulted to `~/.devfiles`, but this location can be customised by setting the environment variable `$DEV_HOME` before sourcing `dev.sh`.
+`$DEVFILE_HOME` is defaulted to `~/.devfiles`, but this location can be customised by setting the environment variable `$DEVFILE_HOME` before sourcing `dev.sh`.

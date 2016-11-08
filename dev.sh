@@ -1,4 +1,4 @@
-DEV_HOME="${DEV_ENVS_HOME:-$HOME/.devfiles}"
+DEVFILE_HOME="${DEVFILE_HOME:-$HOME/.devfiles}"
 
 
 function _dev_usage() {
@@ -8,7 +8,7 @@ function _dev_usage() {
     echo "Positional arguments:"
     echo "  environment   The environment to set up. The environment <env>"
     echo "                should have a corresponding file located at"
-    echo "                $DEV_HOME/<env>".
+    echo "                $DEVFILE_HOME/<env>".
     echo ""
     echo "Optional arguments:"
     echo "  -h            Help. Display this message and quit."
@@ -56,7 +56,7 @@ function dev() {
 
   # Get environments
   _envs=();
-  for _environment_path in $DEV_HOME/*; do
+  for _environment_path in $DEVFILE_HOME/*; do
     _envs=(${_envs[@]} ${_environment_path##*/})
   done
 
@@ -76,5 +76,5 @@ function dev() {
     return 1
   fi
 
-  source $DEV_HOME/$_env
+  source $DEVFILE_HOME/$_env
 }

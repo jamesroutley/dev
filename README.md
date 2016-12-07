@@ -42,13 +42,13 @@ Optional arguments:
 With git, for BASH:
 ```shell
 $ git clone git://github.com/jamesroutley/dev.git ~/.dev
-$ echo 'source ~/.dev/dev.sh' >> .bashrc
+$ echo 'source ~/.dev/dev.sh' >> ~/.bashrc
 ```
 
 With git, for ZSH:
 ```shell
 $ git clone git://github.com/jamesroutley/dev.git ~/.dev
-$ echo 'source ~/.dev/dev.sh' >> .zshrc
+$ echo 'source ~/.dev/dev.sh' >> ~/.zshrc
 ```
 
 
